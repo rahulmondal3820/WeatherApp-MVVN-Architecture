@@ -3,8 +3,9 @@ package com.rahulmondal.weatherapp.di.module
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import com.rahulmondal.weatherapp.di.ActivityContext
+import dagger.Module
 import dagger.Provides
-
+@Module
 class ActivityModule(private val activity: AppCompatActivity) {
     @ActivityContext
     @Provides
