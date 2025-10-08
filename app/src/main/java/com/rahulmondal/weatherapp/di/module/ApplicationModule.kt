@@ -22,7 +22,7 @@ class ApplicationModule(private val application:MyApplication) {
 
     @BaseUrl
     @Provides
-    fun provideBaseUrl(): String=" http://api.weatherapi.com/v1"
+    fun provideBaseUrl(): String=" https://api.weatherapi.com/v1/"
 
     @Singleton
     @Provides

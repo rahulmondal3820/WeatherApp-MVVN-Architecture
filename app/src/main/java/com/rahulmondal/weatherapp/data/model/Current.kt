@@ -4,11 +4,11 @@ import com.google.gson.annotations.SerializedName
 
 data class Current(
     @SerializedName("temp_c")
-    val temp: Int = 0,
+    val temp: Float = 0f,
     @SerializedName("last_updated")
     val lastUpdate: String="",
     @SerializedName("wind_kph")
-    val windSpeed: Int=0,
+    val windSpeed: Float=0f,
     @SerializedName("humidity")
     val humidity: Int=0,
     @SerializedName("cloud")

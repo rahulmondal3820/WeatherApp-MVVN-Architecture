@@ -1,5 +1,6 @@
 package com.rahulmondal.weatherapp.ui.home
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.rahulmondal.weatherapp.data.model.CurrentWeatherResponse
@@ -23,6 +24,7 @@ class CurrentWeatherViewModel(private val repository: CurrentWeatherRepository):
                 _uiState.value= UiState.Error(it.toString())
             }.collect {
                 _uiState.value= UiState.Success(it)
+
             }
         }
     }
