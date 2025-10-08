@@ -11,4 +11,5 @@ import javax.inject.Singleton
 interface ApplicationComponent {
     fun inject(application: MyApplication)
     fun getWeatherRepository(): CurrentWeatherRepository
+
 }
