@@ -24,6 +24,7 @@ class CurrentWeatherViewModel(private val repository: CurrentWeatherRepository):
                 _uiState.value= UiState.Error(it.toString())
             }.collect {
                 _uiState.value= UiState.Success(it)
+                Log.d("check","this is the data $it")
 
             }
         }
