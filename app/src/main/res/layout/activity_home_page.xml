@@ -6,39 +6,137 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomePageActivity">
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/cityTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
+        android:text="New Delhi"
         android:fontFamily="@font/poppins_light"
-        android:textSize="30sp"
         android:letterSpacing="0.15"
         android:padding="10dp"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textAllCaps="true"
-        tools:text="New Delhi"
-
-        />
+        app:layout_constraintBottom_toTopOf="@id/temTextView"
+        tools:text="New Delhi" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/temTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textSize="100sp"
         android:fontFamily="@font/poppins_extra_light"
+        android:text="75"
         android:letterSpacing="0.15"
+        android:textColor="@color/black"
+        android:textSize="100sp"
+        app:layout_constraintBottom_toTopOf="@id/informationLinearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cityTextView"
+        tools:text="75" />
+
+    <LinearLayout
+        android:id="@+id/informationLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        tex
+        app:layout_constraintTop_toBottomOf="@id/temTextView">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
 
-        end
-        tools:text="75"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cloudPercentTextTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                tools:text="cloud Percent"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/cloud_24"
+            />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cloudPercentNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                tools:text="70%"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/humidityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                tools:text="Humidity"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/humidity_24"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/humidityNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                tools:text="70%"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/windSpeedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                tools:text="Humidity"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/wind_speed_24"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/windSpeedNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_light"
+                tools:text="70%"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
 
 
 
